@@ -67,14 +67,14 @@ int main() //Função principal
 			
 		else //Comando caso haja login
 		
-		for (repit=1;repit=1;)
+		for(laco=1;laco=1;) //comando de comparação
 		{
 			
 			system("cls");
 			
 			printf("Bem vindo ao cartório da EBAC, %s\n\n",name);
 			printf("Digite sua senha: ");
-			sanf("%s",senhalogin);
+			scanf("%s",senhalogin);
 			
 	
 	    	file = fopen(senhalogin, "r");  //Abre o arquivo  (o "r" é para escanear)
@@ -82,6 +82,8 @@ int main() //Função principal
 			if(file ==NULL)
     		{
     			fclose(file);
+    			
+    			system("cls");
     			
     		    printf("A senha está icorreta, tentar novamente?\n\n");
     		    printf("\t1 - sim\n");
@@ -101,6 +103,7 @@ int main() //Função principal
 					break;
 					
 					case 3:
+					printf("Obrigado por utilizar o sistema!\n\n");	
 					return 0;
 					break;
 					
@@ -133,10 +136,10 @@ int menuprincipal()
 	    //Inicio do menu
 	    printf("### Registro geral de alunos da EBAC ####\n\n"); //Se comunica com o usuário
   	  	printf("Selecione a opção desejada:\n\n"); //Se comunica com o usuário
-    	printf("\t1 - Registrar alunos\n"); //Se comunica com o usuário
-   		printf("\t2 - Consultar alunos\n"); //Se comunica com o usuário
-   		printf("\t3 - Deletar alunos\n"); //Se comunica com o usuário
-   		printf("\t4 - Sair do sistema\n\n"); //Se comunica com o usuário
+    	printf("\t1 - Registrar usuários\n"); //Se comunica com o usuário
+   		printf("\t2 - Consultar usuários\n"); //Se comunica com o usuário
+   		printf("\t3 - Deletar usuários\n\n"); //Se comunica com o usuário
+   		printf("\t4 - Sair\n\n"); //Se comunica com o usuário
     	printf("Opção:");  //Se comunica com o usuário
 		//Final do menu
 				
@@ -161,7 +164,7 @@ int menuprincipal()
     					
     		case 4: //caso aplicar determinada variável
     		printf("Obrigado por utilizar o sistema!\n\n"); //Se comunica com o usuário
-    		return 0;  //queba laço e sai do sistema
+    		return 0; return 0;
     		break;
     	
     		default: //Comando caso a variável digitada não seja nenhuma das opções acima
@@ -297,7 +300,7 @@ int consulta() //função das consultas
 	while(fgets(conteudo, 200,file)!=NULL) //Comando de escaneamento (se escanear e não encontrar o arquivo se torna nullo)
 	{
 		printf("\nEssas são as informações do usuário:\n\n "); //Se comunica com o usuário
-		printf("%s", conteudo); //Aba para o usuário preencher
+		printf("%s", conteudo); //Se comunica com o usuário
 		printf("\n\n"); //Se comunica com o usuário (nesse casso, apenas pulou duas linhas)
 	}
 	
