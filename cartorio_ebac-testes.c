@@ -99,7 +99,7 @@ int main() //Função principal
 					break;
 					
 					case 2:
-					main();
+					return 0;
 					break;
 					
 					case 3:
@@ -164,7 +164,8 @@ int menuprincipal()
     					
     		case 4: //caso aplicar determinada variável
     		printf("Obrigado por utilizar o sistema!\n\n"); //Se comunica com o usuário
-    		return 0; return 0;
+    		system("pause");
+    		return 0;
     		break;
     	
     		default: //Comando caso a variável digitada não seja nenhuma das opções acima
